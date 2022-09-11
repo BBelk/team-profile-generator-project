@@ -3,6 +3,7 @@ const Employee = require("../lib/Employee");
 describe("Employee", () => {
 
     const newEmployee = new Employee("Bruce", 123, "belkbh@gmail.com");
+    
     describe("retrieve name", () =>{
         it('check for employee name', () =>{
             expect(newEmployee.getName()).toBe("Bruce");

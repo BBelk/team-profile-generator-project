@@ -5,22 +5,24 @@ const generateTeam = team => {
     // create the manager html
     const generateManager = manager => {
         return `
-        <div>
-            <div>
-                <h2>${manager.getName()}</h2>
-                <h3>
-                    <i class="fas fa-mug-hot mr-2"></i> ${manager.getRole()}
-                </h3>
+        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow">
+            <div class="card-body p-0  bg-primary rounded-top justify-content-center">
+                <div class="card-title text-white ps-3 p-1">
+                    <h2>${manager.getName()}</h2>
+                    <h3>
+                        <i class="fas fa-mug-hot mr-2"></i> ${manager.getRole()}
+                    </h3>
+                    </div>
             </div>
-            <div>
-                <ul>
-                    <li>
+            <div class="bg-muted">
+                <ul class="list-group p-2">
+                    <li class="list-group-item">
                         ID: ${manager.getId()}
                     </li>
-                    <li>
+                    <li class="list-group-item">
                         Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a>
                     </li>
-                    <li>
+                    <li class="list-group-item">
                         Office number: ${manager.getOfficeNumber()}
                     </li>
                 </ul>
@@ -32,20 +34,22 @@ const generateTeam = team => {
     // create the html for engineers
     const generateEngineer = engineer => {
         return `
-        <div>
-            <div>
+        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow">
+            <div class="card-body p-0  bg-primary rounded-top justify-content-center">
+                <div class="card-title text-white ps-3 p-1">
                 <h2>${engineer.getName()}</h2>
                 <h3>
-                    <i class="fas fa-glasses mr-2"></i>${engineer.getRole()}
+                    <i class="fas fa-glasses mr-2"></i>  ${engineer.getRole()}
                 </h3>
+                </div>
             </div>
-            <div>
-                <ul>
-                    <li>ID: ${engineer.getId()}</li>
-                    <li>
+            <div class="bg-muted">
+                <ul class="list-group p-2">
+                    <li class="list-group-item">ID: ${engineer.getId()}</li>
+                    <li class="list-group-item">
                         Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a>
                     </li>
-                    <li>
+                    <li class="list-group-item">
                         GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank" rel="noopener noreferrer">${engineer.getGithub()}</a>
                     </li>
                 </ul>
@@ -57,18 +61,20 @@ const generateTeam = team => {
     // create the html for interns
     const generateIntern = intern => {
         return `
-        <div>
-    <div>
+        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow">
+            <div class="card-body p-0  bg-primary rounded-top justify-content-center">
+                <div class="card-title text-white ps-3 p-1">
         <h2>${intern.getName()}</h2>
         <h3>
-            <i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}
+            <i class="fas fa-user-graduate mr-2"></i> ${intern.getRole()}
         </h3>
+        </div>
     </div>
-    <div>
-        <ul>
-            <li>ID: ${intern.getId()}</li>
-            <li>${intern.getEmail()}</a></li>
-            <li>School: ${intern.getSchool()}</li>
+    <div class="bg-muted">
+        <ul class="list-group p-2">
+            <li class="list-group-item">ID: ${intern.getId()}</li>
+            <li class="list-group-item">${intern.getEmail()}</a></li>
+            <li class="list-group-item">School: ${intern.getSchool()}</li>
         </ul>
     </div>
 </div>
@@ -108,13 +114,23 @@ module.exports = team => {
         <title>My Team</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     </head>
     <body>
         <header>
-            <h1>My Team</h1>
+        <div id="navbar">
+        <nav class="navbar navbar-info bg-danger" style="margin-bottom:20px">
+          <span class="navbar-text text-center w-100 text-white" style="font-size:50px ">
+            My Team
+          </span>
+        </nav>
+      </div>
         </header>
         <main>
-            ${generateTeam(team)}
+            <div class = "row justify-content-evenly pt-5 mx-auto">
+                ${generateTeam(team)}
+            </div>
         </main>
     </body>
 </html>

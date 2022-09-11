@@ -17,3 +17,52 @@
         </main>
     </body>
 </html>
+
+
+
+
+<!-- // create the html for engineers
+    const generateEngineer = engineer => {
+        return `
+        <div>
+            <div>
+                <h2>${engineer.getName()}</h2>
+                <h3>
+                    <i class="fas fa-glasses mr-2"></i>${engineer.getRole()}
+                </h3>
+            </div>
+            <div>
+                <ul>
+                    <li>ID: ${engineer.getId()}</li>
+                    <li>
+                        Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a>
+                    </li>
+                    <li>
+                        GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank" rel="noopener noreferrer">${engineer.getGithub()}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        `;
+    };
+
+    // create the html for interns
+    const generateIntern = intern => {
+        return `
+        <div>
+    <div>
+        <h2>${intern.getName()}</h2>
+        <h3>
+            <i class="fas fa-user-graduate mr-2"></i>${intern.getRole()}
+        </h3>
+    </div>
+    <div>
+        <ul>
+            <li>ID: ${intern.getId()}</li>
+            <li>${intern.getEmail()}</a></li>
+            <li>School: ${intern.getSchool()}</li>
+        </ul>
+    </div>
+</div>
+        `;
+    }; -->
