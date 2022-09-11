@@ -23,7 +23,7 @@ describe("Manager", () => {
 
     describe("retrieve office number", () =>{
         it('check for Manager officeNumber', () =>{
-            expect(newManager.getOfficeNumer()).toEqual(789);
+            expect(newManager.getOfficeNumber()).toEqual(789);
         });
     });
 
