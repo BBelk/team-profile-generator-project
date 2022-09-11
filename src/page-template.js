@@ -5,7 +5,7 @@ const generateTeam = team => {
     // create the manager html
     const generateManager = manager => {
         return `
-        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow">
+        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow" style="width: 18rem;">
             <div class="card-body p-0  bg-primary rounded-top justify-content-center">
                 <div class="card-title text-white ps-3 p-1">
                     <h2>${manager.getName()}</h2>
@@ -34,7 +34,7 @@ const generateTeam = team => {
     // create the html for engineers
     const generateEngineer = engineer => {
         return `
-        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow">
+        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow" style="width: 18rem;">
             <div class="card-body p-0  bg-primary rounded-top justify-content-center">
                 <div class="card-title text-white ps-3 p-1">
                 <h2>${engineer.getName()}</h2>
@@ -61,8 +61,8 @@ const generateTeam = team => {
     // create the html for interns
     const generateIntern = intern => {
         return `
-        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow">
-            <div class="card-body p-0  bg-primary rounded-top justify-content-center">
+        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow" style="width: 18rem;">
+            <div class="card-body p-0 bg-primary rounded-top justify-content-center" >
                 <div class="card-title text-white ps-3 p-1">
         <h2>${intern.getName()}</h2>
         <h3>
@@ -73,7 +73,7 @@ const generateTeam = team => {
     <div class="bg-muted">
         <ul class="list-group p-2">
             <li class="list-group-item">ID: ${intern.getId()}</li>
-            <li class="list-group-item">${intern.getEmail()}</a></li>
+            <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
             <li class="list-group-item">School: ${intern.getSchool()}</li>
         </ul>
     </div>
@@ -128,7 +128,7 @@ module.exports = team => {
       </div>
         </header>
         <main>
-            <div class = "row justify-content-evenly pt-5 mx-auto">
+            <div class = "row justify-content-center pt-5 mx-auto">
                 ${generateTeam(team)}
             </div>
         </main>

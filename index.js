@@ -13,26 +13,40 @@ const pageTemplate = require('./src/page-template');
 const managerQuestions = [
     {
         name: 'newName',
-        message: 'What is your name?',
+        message: 'What is the Managers name?',
     },
     {
+        input: 'number',
         name: 'newId',
-        message: 'What is your ID?',
+        message: 'What is the Managers ID?',
+        validate: (answer) => {
+            if (isNaN(answer)) {
+              return "Please enter a number";
+            }
+            return true;
+          },
     },
     {
         name: 'newEmail',
-        message: 'What is your email?',
+        message: 'What is the Managers email?',
     },
     {
+        input: 'number',
         name: 'newOfficeNumber',
-        message: 'What is your office number?',
+        message: 'What is the Managers office number?',
+        validate: (answer) => {
+            if (isNaN(answer)) {
+              return "Please enter a number";
+            }
+            return true;
+          },
     },
     {
         name: 'doNext',
         type: 'list',
         choices:[
-            'Add Intern',
             'Add Engineer',
+            'Add Intern',
             'Done',
         ],
         message: 'Add new employees or are you done?',
@@ -42,19 +56,26 @@ const managerQuestions = [
 const engineerQuestions = [
     {
         name: 'newName',
-        message: 'What is your name?',
+        message: 'What is the Engineers name?',
     },
     {
+        input: 'number',
         name: 'newId',
-        message: 'What is your ID?',
+        message: 'What is the Engineers ID?',
+        validate: (answer) => {
+            if (isNaN(answer)) {
+              return "Please enter a number";
+            }
+            return true;
+          },
     },
     {
         name: 'newEmail',
-        message: 'What is your email?',
+        message: 'What is the Engineers email?',
     },
     {
         name: 'newGithub',
-        message: 'What is your github username?',
+        message: 'What is the Engineers GitHub username?',
     },
     {
         name: 'doNext',
@@ -71,19 +92,26 @@ const engineerQuestions = [
 const internQuestions = [
     {
         name: 'newName',
-        message: 'What is your name?',
+        message: 'What is the Interns name?',
     },
     {
+        input: 'number',
         name: 'newId',
-        message: 'What is your ID?',
+        message: 'What is the Interns ID?',
+        validate: (answer) => {
+            if (isNaN(answer)) {
+              return "Please enter a number";
+            }
+            return true;
+          },
     },
     {
         name: 'newEmail',
-        message: 'What is your email?',
+        message: 'What is the Interns email?',
     },
     {
         name: 'newSchool',
-        message: 'What is your school name?',
+        message: 'What is the Interns school name?',
     },
     {
         name: 'doNext',
@@ -147,6 +175,6 @@ function FinishedTeam(teamData){
     const generatedHTML = pageTemplate(teamData);
     fs.writeFile('./dist/team.html', generatedHTML, (err) => {
         if (err) throw err;
-        console.log('File exists, updating.');
+        console.log('File exists in /dist directory, updating.');
     });
 }
