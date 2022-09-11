@@ -23,7 +23,7 @@ describe("Engineer", () => {
 
     describe("retrieve github", () =>{
         it('check for engineer github', () =>{
-            expect(newEngineer.getGitHub()).toBe("bbelk");
+            expect(newEngineer.getGithub()).toBe("bbelk");
         });
     });
 
