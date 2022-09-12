@@ -123,6 +123,7 @@ module.exports = team => {
 body {
     font-family: 'Merriweather Sans', sans-serif;
 }
+</style>
     </head>
     <body>
         <header>
@@ -135,7 +136,7 @@ body {
       </div>
         </header>
         <main>
-            <div class = "row justify-content-center pt-5 mx-auto">
+            <div class = "row justify-content-center pt-5 mx-5">
                 ${generateTeam(team)}
             </div>
         </main>
