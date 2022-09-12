@@ -7,10 +7,10 @@ const generateTeam = team => {
         return `
         <div class = "col-sm-3 mx-5 my-2 card px-0 shadow" style="width: 18rem;">
             <div class="card-body p-0  bg-primary rounded-top justify-content-center">
-                <div class="card-title text-white ps-3 p-1">
+                <div class="card-title text-white ps-3 p-1 my-2">
                     <h2>${manager.getName()}</h2>
                     <h3>
-                        <i class="fas fa-mug-hot mr-2"></i> ${manager.getRole()}
+                        <i class="fas fa-mug-hot mr-2"></i>  ${manager.getRole()}
                     </h3>
                     </div>
             </div>
@@ -36,7 +36,7 @@ const generateTeam = team => {
         return `
         <div class = "col-sm-3 mx-5 my-2 card px-0 shadow" style="width: 18rem;">
             <div class="card-body p-0  bg-primary rounded-top justify-content-center">
-                <div class="card-title text-white ps-3 p-1">
+                <div class="card-title text-white ps-3 p-1 my-2">
                 <h2>${engineer.getName()}</h2>
                 <h3>
                     <i class="fas fa-glasses mr-2"></i>  ${engineer.getRole()}
@@ -63,10 +63,10 @@ const generateTeam = team => {
         return `
         <div class = "col-sm-3 mx-5 my-2 card px-0 shadow" style="width: 18rem;">
             <div class="card-body p-0 bg-primary rounded-top justify-content-center" >
-                <div class="card-title text-white ps-3 p-1">
+                <div class="card-title text-white ps-3 p-1 my-2">
         <h2>${intern.getName()}</h2>
         <h3>
-            <i class="fas fa-user-graduate mr-2"></i> ${intern.getRole()}
+            <i class="fas fa-user-graduate mr-2"></i>  ${intern.getRole()}
         </h3>
         </div>
     </div>
@@ -116,6 +116,13 @@ module.exports = team => {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+<style>
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+}
     </head>
     <body>
         <header>
