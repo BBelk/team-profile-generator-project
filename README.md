@@ -10,6 +10,7 @@
 
   ## Submission
   [Link to generated html page code](https://github.com/BBelk/team-profile-generator-project/blob/main/index.html)
+  
   [Link to live generated html page on GitHub pages](https://bbelk.github.io/team-profile-generator-project/)
 
   [Link to walthrough screencastify video](https://watch.screencastify.com/v/0tedGRPeDhIo5IEc2QF3)
@@ -29,4 +30,4 @@
   Tests can be performed on the employee classes in the _test_ directory. First, install jest(see installation section), then run npm jest in gitbash.
   ## Visuals
 
- ![Alt text](https://github.com/BBelk/readme-generator-project/blob/main/images/readme-generator-project-image.png "README Screenshot")
+ ![Alt text](instruct\Assets\BruceBelk-myTeam.png "Generated HTML Page Screenshot")
