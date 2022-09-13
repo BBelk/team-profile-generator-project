@@ -5,9 +5,9 @@ const generateTeam = team => {
     // create the manager html
     const generateManager = manager => {
         return `
-        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow" style="width: 18rem;">
+        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow" style="width: 22rem;">
             <div class="card-body p-0  bg-primary rounded-top justify-content-center">
-                <div class="card-title text-white ps-3 p-1 my-2">
+                <div class="card-title text-white ps-3 mt-2">
                     <h2>${manager.getName()}</h2>
                     <h3>
                         <i class="fas fa-mug-hot mr-2"></i>  ${manager.getRole()}
@@ -34,9 +34,9 @@ const generateTeam = team => {
     // create the html for engineers
     const generateEngineer = engineer => {
         return `
-        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow" style="width: 18rem;">
+        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow" style="width: 22rem;">
             <div class="card-body p-0  bg-primary rounded-top justify-content-center">
-                <div class="card-title text-white ps-3 p-1 my-2">
+                <div class="card-title text-white ps-3 mt-2">
                 <h2>${engineer.getName()}</h2>
                 <h3>
                     <i class="fas fa-glasses mr-2"></i>  ${engineer.getRole()}
@@ -61,9 +61,9 @@ const generateTeam = team => {
     // create the html for interns
     const generateIntern = intern => {
         return `
-        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow" style="width: 18rem;">
+        <div class = "col-sm-3 mx-5 my-2 card px-0 shadow" style="width: 22rem;">
             <div class="card-body p-0 bg-primary rounded-top justify-content-center" >
-                <div class="card-title text-white ps-3 p-1 my-2">
+                <div class="card-title text-white ps-3 mt-2">
         <h2>${intern.getName()}</h2>
         <h3>
             <i class="fas fa-user-graduate mr-2"></i>  ${intern.getRole()}

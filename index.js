@@ -132,7 +132,6 @@ function doInquirer(newQuestions, roleInt){
     inquirer.prompt(newQuestions)
     .then(response => {
 
-
         if(roleInt == 0){
             var newManager = new Manager(response.newName, response.newId, response.newEmail, response.newOfficeNumber);
             teamArray.push(newManager);
