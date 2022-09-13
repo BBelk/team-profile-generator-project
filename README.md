@@ -30,4 +30,4 @@
   Tests can be performed on the employee classes in the _test_ directory. First, install jest(see installation section), then run npm jest in gitbash.
   ## Visuals
 
- ![Alt text](./instruct\Assets\BruceBelk-myTeam.png "Generated HTML Page Screenshot")
+ ![Alt text](.\instruct\Assets\BruceBelk-myTeam.png "Generated HTML Page Screenshot")
